@@ -1,0 +1,31 @@
+
+# --------------------
+#        HEADER
+# --------------------
+
+test-lists:
+  booleans:
+  - false
+  - true
+  strings:
+    - value1
+    - value2
+  numbers:
+      - 2.1
+      - 42
+
+changes:
+  multiline: |-
+    first
+    second
+  array: [1, 2, 3]
+
+wrong-type:
+  level:
+    a: 1
+    b: ok
+    c: true
+
+wrong-place:
+  first: 1
+  second: 2
