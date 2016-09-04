@@ -267,23 +267,26 @@ public class FileConfiguration {
                 if (inputValue == null) {
                     // No user value
                     input.set(key, defValue);
-                } else if (defValue instanceof Configuration) {
-                    // There is a default section
-                    if (inputValue instanceof Configuration) {
-                        // And a user section, so apply default into it
-                        copyDefaults((Configuration) inputValue, (Configuration) defValue);
-                    } else {
-                        // But no user section, so just copy it
-                        input.set(key, defValue);
-                    }
-                } else if (!inputValue.getClass().equals(defValue.getClass())) {
-                    // Values are not the same type
-                    // We get the base class, as for instance Integer ≠ Float but both are Numbers
-                    Class inputClass = getBaseClass(inputValue);
-                    Class defClass = getBaseClass(defValue);
-                    if (inputClass == null || !inputClass.equals(defClass)) {
-                        // Still different types, so override user value
-                        input.set(key, defValue);
+                } else if (defValue != null) {
+                    // defValue == null means we can have anything, so we skip it
+                    if (defValue instanceof Configuration) {
+                        // There is a default section
+                        if (inputValue instanceof Configuration) {
+                            // And a user section, so apply default into it
+                            copyDefaults((Configuration) inputValue, (Configuration) defValue);
+                        } else {
+                            // But no user section, so just copy it
+                            input.set(key, defValue);
+                        }
+                    } else if (!inputValue.getClass().equals(defValue.getClass())) {
+                        // Values are not the same type
+                        // We get the base class, as for instance Integer ≠ Float but both are Numbers
+                        Class inputClass = getBaseClass(inputValue);
+                        Class defClass = getBaseClass(defValue);
+                        if (inputClass == null || !inputClass.equals(defClass)) {
+                            // Still different types, so override user value
+                            input.set(key, defValue);
+                        }
                     }
                 }
             }

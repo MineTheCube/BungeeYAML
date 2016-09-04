@@ -25,3 +25,7 @@ wrong-type:
 wrong-place:
   first: 1
   second: 2
+special-keys:
+  'false': another string
+  '3': integer
+  'null': string

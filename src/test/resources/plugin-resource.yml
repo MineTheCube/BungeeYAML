@@ -29,3 +29,8 @@ wrong-type:
 wrong-place:
   first: 1
   second: 2
+
+special-keys:
+  false: "true"
+  3: "integer"
+  null: null
