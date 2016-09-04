@@ -365,6 +365,10 @@ public class FileConfiguration {
         return getConfig().get(path, def);
     }
 
+    public boolean contains(String path) {
+        return getConfig().contains(path);
+    }
+
     public Object get(String path) {
         return getConfig().get(path);
     }
