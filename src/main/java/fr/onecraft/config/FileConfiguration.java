@@ -348,7 +348,7 @@ public class FileConfiguration {
     }
 
     private Class getBaseClass(Object object) {
-        Class<?>[] classes = { Configuration.class, Boolean.class, Number.class, Character.class, String.class, List.class };
+        Class<?>[] classes = {Configuration.class, Boolean.class, Number.class, Character.class, String.class, List.class};
         for (Class<?> clazz : classes) {
             if (clazz.isInstance(object)) {
                 return clazz;

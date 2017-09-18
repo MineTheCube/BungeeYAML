@@ -38,7 +38,7 @@ public class IOConfigurationException extends ConfigurationException {
      * specified message and cause.
      *
      * @param cause The cause of the exception.
-     * @param msg The details of the exception.
+     * @param msg   The details of the exception.
      */
     public IOConfigurationException(String msg, Throwable cause) {
         super(msg, cause);

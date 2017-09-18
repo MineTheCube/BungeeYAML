@@ -13,8 +13,7 @@ public enum Config {
     USER_EDITED,
     PLUGIN_RESOURCE,
     EXPECTED_WITH_DEFAULT,
-    EXPECTED_WITHOUT_DEFAULT,
-    ;
+    EXPECTED_WITHOUT_DEFAULT;
 
     public File getFile() {
         ClassLoader classLoader = getClass().getClassLoader();

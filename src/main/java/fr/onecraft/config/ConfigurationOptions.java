@@ -32,6 +32,7 @@ public class ConfigurationOptions {
         this.header = value;
         return this;
     }
+
     public boolean copyHeader() {
         return copyHeader;
     }
