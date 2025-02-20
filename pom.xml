@@ -15,7 +15,7 @@
         <project.build.outputEncoding>${projectEncoding}</project.build.outputEncoding>
 
         <!-- JDK Version -->
-        <jdkVersion>1.7</jdkVersion>
+        <jdkVersion>1.8</jdkVersion>
 
         <!-- Bungeecord Version -->
         <bungeeVersion>1.10-SNAPSHOT</bungeeVersion>
